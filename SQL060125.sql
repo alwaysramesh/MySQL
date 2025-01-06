@@ -1,0 +1,15 @@
+CREATE DATABASE Cybrom;
+Use Cybrom;
+CREATE table Student(Roll_No int, Name varchar(10), per int, Address varchar(20));
+DESC Student;
+insert Student values(101,"Ram",12,"A-1");
+insert Student values(102,"Ramesh",12,"A-2");
+insert Student values(103,"Ranjan",12,"A-3");
+select * from Student;
+select * from Student where Roll_No=101;
+select * from student where Roll_No=103;
+select * from Student where Name="Ramesh";
+set sql_safe_updates=0;
+update Student set per=30;
+update Student set per=40 where name="Ramesh";
+select * from Student;
